@@ -15,16 +15,16 @@
       "response_pass_rate": 0.1667
     },
     "semantic_quality": {
-      "avg_response_semantic_score": 0.2273
+      "avg_response_semantic_score": 0.2252
     },
     "calibration": {
-      "avg_confidence": 0.6678
+      "avg_confidence": 0.6578
     },
     "performance": {
-      "avg_latency_ms": 1814.67,
-      "latency_p50_ms": 104.72,
-      "latency_p90_ms": 6978.77,
-      "latency_p99_ms": 7017.82
+      "avg_latency_ms": 2378.34,
+      "latency_p50_ms": 127.41,
+      "latency_p90_ms": 9205.23,
+      "latency_p99_ms": 9223.88
     },
     "stability": {
       "intent_agreement_rate": 1.0,
@@ -32,6 +32,36 @@
     },
     "majority_failure_breakdown": {
       "failures_by_test": {
+        "technical_support": [
+          {
+            "turn_index": 0,
+            "kind": "intent",
+            "true_votes": 0,
+            "false_votes": 3,
+            "majority_passed": false
+          },
+          {
+            "turn_index": 0,
+            "kind": "response",
+            "true_votes": 0,
+            "false_votes": 3,
+            "majority_passed": false
+          },
+          {
+            "turn_index": 1,
+            "kind": "intent",
+            "true_votes": 0,
+            "false_votes": 3,
+            "majority_passed": false
+          },
+          {
+            "turn_index": 1,
+            "kind": "response",
+            "true_votes": 0,
+            "false_votes": 3,
+            "majority_passed": false
+          }
+        ],
         "ambiguous_question": [
           {
             "turn_index": 0,
@@ -63,36 +93,6 @@
           }
         ],
         "greeting_simple": [
-          {
-            "turn_index": 1,
-            "kind": "intent",
-            "true_votes": 0,
-            "false_votes": 3,
-            "majority_passed": false
-          },
-          {
-            "turn_index": 1,
-            "kind": "response",
-            "true_votes": 0,
-            "false_votes": 3,
-            "majority_passed": false
-          }
-        ],
-        "technical_support": [
-          {
-            "turn_index": 0,
-            "kind": "intent",
-            "true_votes": 0,
-            "false_votes": 3,
-            "majority_passed": false
-          },
-          {
-            "turn_index": 0,
-            "kind": "response",
-            "true_votes": 0,
-            "false_votes": 3,
-            "majority_passed": false
-          },
           {
             "turn_index": 1,
             "kind": "intent",
@@ -187,135 +187,9 @@
   },
   "results": [
     {
-      "run_index": 1,
-      "test_id": "ambiguous_question",
-      "user_id": "ambiguous_question-run1-688c3bbb",
-      "turns": [
-        {
-          "turn_index": 0,
-          "expected_intent": "information_request",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 6947.3588000109885,
-          "confidence": 0.58,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.3174276649951935,
-          "response_rule_hits": [
-            "kw(information):fail",
-            "kw(details):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        },
-        {
-          "turn_index": 1,
-          "expected_intent": "program_information",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 102.45089998352341,
-          "confidence": 0.58,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.1810438334941864,
-          "response_rule_hits": [
-            "kw(program):fail",
-            "kw(course):fail",
-            "kw(study):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        }
-      ]
-    },
-    {
-      "run_index": 0,
-      "test_id": "ambiguous_question",
-      "user_id": "ambiguous_question-run0-851708c6",
-      "turns": [
-        {
-          "turn_index": 0,
-          "expected_intent": "information_request",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 6963.866399979452,
-          "confidence": 0.58,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.27197957038879395,
-          "response_rule_hits": [
-            "kw(information):fail",
-            "kw(details):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        },
-        {
-          "turn_index": 1,
-          "expected_intent": "program_information",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 104.24960000091232,
-          "confidence": 0.73,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.17272673547267914,
-          "response_rule_hits": [
-            "kw(program):fail",
-            "kw(course):fail",
-            "kw(study):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        }
-      ]
-    },
-    {
-      "run_index": 0,
-      "test_id": "greeting_simple",
-      "user_id": "greeting_simple-run0-f1610551",
-      "turns": [
-        {
-          "turn_index": 0,
-          "expected_intent": "greeting",
-          "predicted_intent": "greeting",
-          "intent_correct": true,
-          "response_pass": true,
-          "latency_ms": 7009.546400018735,
-          "confidence": 0.92,
-          "intent_match_method": "exact",
-          "intent_match_score": 1.0,
-          "response_semantic_score": 0.7511197328567505,
-          "response_rule_hits": [
-            "kw(hello):fail",
-            "kw(hi):pass",
-            "kw(welcome):fail"
-          ]
-        },
-        {
-          "turn_index": 1,
-          "expected_intent": "general_help",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 75.67780002136715,
-          "confidence": 0.54,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.13974298536777496,
-          "response_rule_hits": [
-            "kw(help):fail",
-            "kw(assist):fail",
-            "kw(support):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        }
-      ]
-    },
-    {
       "run_index": 0,
       "test_id": "technical_support",
-      "user_id": "technical_support-run0-303b34d2",
+      "user_id": "technical_support-run0-1cb52557",
       "turns": [
         {
           "turn_index": 0,
@@ -323,8 +197,8 @@
           "predicted_intent": "unknown",
           "intent_correct": false,
           "response_pass": false,
-          "latency_ms": 6948.797899996862,
-          "confidence": 0.7,
+          "latency_ms": 9173.378699983004,
+          "confidence": 0.5,
           "intent_match_method": "exact",
           "intent_match_score": 0.0,
           "response_semantic_score": 0.21445858478546143,
@@ -341,8 +215,8 @@
           "predicted_intent": "unknown",
           "intent_correct": false,
           "response_pass": false,
-          "latency_ms": 152.6853000104893,
-          "confidence": 0.71,
+          "latency_ms": 95.18070000922307,
+          "confidence": 0.68,
           "intent_match_method": "exact",
           "intent_match_score": 0.0,
           "response_semantic_score": 0.024076644331216812,
@@ -357,8 +231,134 @@
     },
     {
       "run_index": 1,
+      "test_id": "ambiguous_question",
+      "user_id": "ambiguous_question-run1-031a8010",
+      "turns": [
+        {
+          "turn_index": 0,
+          "expected_intent": "information_request",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 48.42480001389049,
+          "confidence": 0.71,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.27197957038879395,
+          "response_rule_hits": [
+            "kw(information):fail",
+            "kw(details):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        },
+        {
+          "turn_index": 1,
+          "expected_intent": "program_information",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 165.29070000979118,
+          "confidence": 0.66,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.1810438334941864,
+          "response_rule_hits": [
+            "kw(program):fail",
+            "kw(course):fail",
+            "kw(study):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        }
+      ]
+    },
+    {
+      "run_index": 1,
+      "test_id": "greeting_simple",
+      "user_id": "greeting_simple-run1-2057d16d",
+      "turns": [
+        {
+          "turn_index": 0,
+          "expected_intent": "greeting",
+          "predicted_intent": "greeting",
+          "intent_correct": true,
+          "response_pass": true,
+          "latency_ms": 9204.633799992735,
+          "confidence": 0.92,
+          "intent_match_method": "exact",
+          "intent_match_score": 1.0,
+          "response_semantic_score": 0.7725078463554382,
+          "response_rule_hits": [
+            "kw(hello):pass",
+            "kw(hi):fail",
+            "kw(welcome):fail"
+          ]
+        },
+        {
+          "turn_index": 1,
+          "expected_intent": "general_help",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 118.1454999896232,
+          "confidence": 0.56,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.13974298536777496,
+          "response_rule_hits": [
+            "kw(help):fail",
+            "kw(assist):fail",
+            "kw(support):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        }
+      ]
+    },
+    {
+      "run_index": 0,
+      "test_id": "ambiguous_question",
+      "user_id": "ambiguous_question-run0-9ecd3942",
+      "turns": [
+        {
+          "turn_index": 0,
+          "expected_intent": "information_request",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 9223.684700002195,
+          "confidence": 0.48,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.3174276649951935,
+          "response_rule_hits": [
+            "kw(information):fail",
+            "kw(details):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        },
+        {
+          "turn_index": 1,
+          "expected_intent": "program_information",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 112.87549999542534,
+          "confidence": 0.5,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.17272673547267914,
+          "response_rule_hits": [
+            "kw(program):fail",
+            "kw(course):fail",
+            "kw(study):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        }
+      ]
+    },
+    {
+      "run_index": 1,
       "test_id": "technical_support",
-      "user_id": "technical_support-run1-6f48f50a",
+      "user_id": "technical_support-run1-5a842f30",
       "turns": [
         {
           "turn_index": 0,
@@ -366,8 +366,8 @@
           "predicted_intent": "unknown",
           "intent_correct": false,
           "response_pass": false,
-          "latency_ms": 6974.553599982755,
-          "confidence": 0.54,
+          "latency_ms": 9200.709900003858,
+          "confidence": 0.47,
           "intent_match_method": "exact",
           "intent_match_score": 0.0,
           "response_semantic_score": 0.19445781409740448,
@@ -384,8 +384,8 @@
           "predicted_intent": "unknown",
           "intent_correct": false,
           "response_pass": false,
-          "latency_ms": 155.03760002320632,
-          "confidence": 0.66,
+          "latency_ms": 149.51299998210743,
+          "confidence": 0.57,
           "intent_match_method": "exact",
           "intent_match_score": 0.0,
           "response_semantic_score": 0.086635522544384,
@@ -399,9 +399,9 @@
       ]
     },
     {
-      "run_index": 1,
+      "run_index": 0,
       "test_id": "greeting_simple",
-      "user_id": "greeting_simple-run1-63683b4f",
+      "user_id": "greeting_simple-run0-314e8dbb",
       "turns": [
         {
           "turn_index": 0,
@@ -409,8 +409,8 @@
           "predicted_intent": "greeting",
           "intent_correct": true,
           "response_pass": true,
-          "latency_ms": 6981.369899993297,
-          "confidence": 0.95,
+          "latency_ms": 9151.078099996084,
+          "confidence": 0.91,
           "intent_match_method": "exact",
           "intent_match_score": 1.0,
           "response_semantic_score": 0.7725078463554382,
@@ -426,11 +426,11 @@
           "predicted_intent": "unknown",
           "intent_correct": false,
           "response_pass": false,
-          "latency_ms": 136.34160000947304,
+          "latency_ms": 191.89260000712238,
           "confidence": 0.59,
           "intent_match_method": "exact",
           "intent_match_score": 0.0,
-          "response_semantic_score": 0.13974298536777496,
+          "response_semantic_score": 0.13769172132015228,
           "response_rule_hits": [
             "kw(help):fail",
             "kw(assist):fail",
@@ -441,130 +441,9 @@
       ]
     },
     {
-      "run_index": 1,
-      "test_id": "enrollment_flow",
-      "user_id": "enrollment_flow-run1-06ef2baf",
-      "turns": [
-        {
-          "turn_index": 0,
-          "expected_intent": "course_enrollment",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 7018.67140000104,
-          "confidence": 0.49,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.14818766713142395,
-          "response_rule_hits": [
-            "kw(enroll):fail",
-            "kw(course):fail",
-            "kw(program):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        },
-        {
-          "turn_index": 1,
-          "expected_intent": "registration_process",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 109.1076000011526,
-          "confidence": 0.64,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.02057090774178505,
-          "response_rule_hits": [
-            "kw(register):fail",
-            "kw(application):fail",
-            "kw(process):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        },
-        {
-          "turn_index": 2,
-          "expected_intent": "course_format_question",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 34.519200009526685,
-          "confidence": 0.6,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.057243309915065765,
-          "response_rule_hits": [
-            "kw(online):fail",
-            "kw(remote):fail",
-            "kw(virtual):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        }
-      ]
-    },
-    {
-      "run_index": 1,
-      "test_id": "billing_issue_flow",
-      "user_id": "billing_issue_flow-run1-4e6ffe5e",
-      "turns": [
-        {
-          "turn_index": 0,
-          "expected_intent": "billing_issue",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 7016.246100014541,
-          "confidence": 0.66,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.13236211240291595,
-          "response_rule_hits": [
-            "kw(invoice):fail",
-            "kw(billing):fail",
-            "kw(charge):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        },
-        {
-          "turn_index": 1,
-          "expected_intent": "double_charge_question",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 60.52790000103414,
-          "confidence": 0.62,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.09577752649784088,
-          "response_rule_hits": [
-            "kw(duplicate):fail",
-            "kw(charged):fail",
-            "kw(billing):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        },
-        {
-          "turn_index": 2,
-          "expected_intent": "refund_request",
-          "predicted_intent": "refund_request",
-          "intent_correct": true,
-          "response_pass": true,
-          "latency_ms": 90.40580000146292,
-          "confidence": 0.9,
-          "intent_match_method": "exact",
-          "intent_match_score": 1.0,
-          "response_semantic_score": 0.6047613620758057,
-          "response_rule_hits": [
-            "kw(refund):pass",
-            "kw(reimburse):fail",
-            "kw(return):fail"
-          ]
-        }
-      ]
-    },
-    {
       "run_index": 0,
       "test_id": "enrollment_flow",
-      "user_id": "enrollment_flow-run0-050d3130",
+      "user_id": "enrollment_flow-run0-5deb4329",
       "turns": [
         {
           "turn_index": 0,
@@ -572,8 +451,8 @@
           "predicted_intent": "unknown",
           "intent_correct": false,
           "response_pass": false,
-          "latency_ms": 6976.162099977955,
-          "confidence": 0.52,
+          "latency_ms": 9223.982399998931,
+          "confidence": 0.67,
           "intent_match_method": "exact",
           "intent_match_score": 0.0,
           "response_semantic_score": 0.14818766713142395,
@@ -590,8 +469,8 @@
           "predicted_intent": "unknown",
           "intent_correct": false,
           "response_pass": false,
-          "latency_ms": 140.97869998659007,
-          "confidence": 0.61,
+          "latency_ms": 54.479199985507876,
+          "confidence": 0.7,
           "intent_match_method": "exact",
           "intent_match_score": 0.0,
           "response_semantic_score": 0.04029297083616257,
@@ -608,8 +487,8 @@
           "predicted_intent": "unknown",
           "intent_correct": false,
           "response_pass": false,
-          "latency_ms": 80.28999998350628,
-          "confidence": 0.66,
+          "latency_ms": 120.19869999494404,
+          "confidence": 0.53,
           "intent_match_method": "exact",
           "intent_match_score": 0.0,
           "response_semantic_score": 0.057243309915065765,
@@ -623,256 +502,9 @@
       ]
     },
     {
-      "run_index": 0,
-      "test_id": "billing_issue_flow",
-      "user_id": "billing_issue_flow-run0-c3f1b4ae",
-      "turns": [
-        {
-          "turn_index": 0,
-          "expected_intent": "billing_issue",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 49.80269999941811,
-          "confidence": 0.61,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.13236211240291595,
-          "response_rule_hits": [
-            "kw(invoice):fail",
-            "kw(billing):fail",
-            "kw(charge):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        },
-        {
-          "turn_index": 1,
-          "expected_intent": "double_charge_question",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 166.49469998083077,
-          "confidence": 0.72,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.11003819108009338,
-          "response_rule_hits": [
-            "kw(duplicate):fail",
-            "kw(charged):fail",
-            "kw(billing):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        },
-        {
-          "turn_index": 2,
-          "expected_intent": "refund_request",
-          "predicted_intent": "refund_request",
-          "intent_correct": true,
-          "response_pass": true,
-          "latency_ms": 107.35030000796542,
-          "confidence": 0.91,
-          "intent_match_method": "exact",
-          "intent_match_score": 1.0,
-          "response_semantic_score": 0.6405357122421265,
-          "response_rule_hits": [
-            "kw(refund):pass",
-            "kw(reimburse):fail",
-            "kw(return):fail"
-          ]
-        }
-      ]
-    },
-    {
-      "run_index": 2,
-      "test_id": "technical_support",
-      "user_id": "technical_support-run2-69f6176d",
-      "turns": [
-        {
-          "turn_index": 0,
-          "expected_intent": "technical_issue",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 39.599499985342845,
-          "confidence": 0.7,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.21445858478546143,
-          "response_rule_hits": [
-            "kw(technical):fail",
-            "kw(issue):fail",
-            "kw(problem):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        },
-        {
-          "turn_index": 1,
-          "expected_intent": "server_error",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 83.54369999142364,
-          "confidence": 0.61,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.024076644331216812,
-          "response_rule_hits": [
-            "kw(error):fail",
-            "kw(server):fail",
-            "kw(500):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        }
-      ]
-    },
-    {
-      "run_index": 2,
-      "test_id": "greeting_simple",
-      "user_id": "greeting_simple-run2-93b5bc6f",
-      "turns": [
-        {
-          "turn_index": 0,
-          "expected_intent": "greeting",
-          "predicted_intent": "greeting",
-          "intent_correct": true,
-          "response_pass": true,
-          "latency_ms": 104.32179999770597,
-          "confidence": 0.96,
-          "intent_match_method": "exact",
-          "intent_match_score": 1.0,
-          "response_semantic_score": 0.7511197328567505,
-          "response_rule_hits": [
-            "kw(hello):fail",
-            "kw(hi):pass",
-            "kw(welcome):fail"
-          ]
-        },
-        {
-          "turn_index": 1,
-          "expected_intent": "general_help",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 63.136499986285344,
-          "confidence": 0.71,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.13769172132015228,
-          "response_rule_hits": [
-            "kw(help):fail",
-            "kw(assist):fail",
-            "kw(support):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        }
-      ]
-    },
-    {
-      "run_index": 2,
-      "test_id": "ambiguous_question",
-      "user_id": "ambiguous_question-run2-954bd314",
-      "turns": [
-        {
-          "turn_index": 0,
-          "expected_intent": "information_request",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 68.08110000565648,
-          "confidence": 0.73,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.3174276649951935,
-          "response_rule_hits": [
-            "kw(information):fail",
-            "kw(details):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        },
-        {
-          "turn_index": 1,
-          "expected_intent": "program_information",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 58.77199998940341,
-          "confidence": 0.65,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.1810438334941864,
-          "response_rule_hits": [
-            "kw(program):fail",
-            "kw(course):fail",
-            "kw(study):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        }
-      ]
-    },
-    {
-      "run_index": 2,
-      "test_id": "billing_issue_flow",
-      "user_id": "billing_issue_flow-run2-0f7a5ce7",
-      "turns": [
-        {
-          "turn_index": 0,
-          "expected_intent": "billing_issue",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 105.118700012099,
-          "confidence": 0.53,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.13236211240291595,
-          "response_rule_hits": [
-            "kw(invoice):fail",
-            "kw(billing):fail",
-            "kw(charge):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        },
-        {
-          "turn_index": 1,
-          "expected_intent": "double_charge_question",
-          "predicted_intent": "unknown",
-          "intent_correct": false,
-          "response_pass": false,
-          "latency_ms": 81.98909999919124,
-          "confidence": 0.65,
-          "intent_match_method": "exact",
-          "intent_match_score": 0.0,
-          "response_semantic_score": 0.09577752649784088,
-          "response_rule_hits": [
-            "kw(duplicate):fail",
-            "kw(charged):fail",
-            "kw(billing):fail",
-            "semantic_fallback:fail@0.65"
-          ]
-        },
-        {
-          "turn_index": 2,
-          "expected_intent": "refund_request",
-          "predicted_intent": "refund_request",
-          "intent_correct": true,
-          "response_pass": true,
-          "latency_ms": 52.57060000440106,
-          "confidence": 0.9,
-          "intent_match_method": "exact",
-          "intent_match_score": 1.0,
-          "response_semantic_score": 0.6047613620758057,
-          "response_rule_hits": [
-            "kw(refund):pass",
-            "kw(reimburse):fail",
-            "kw(return):fail"
-          ]
-        }
-      ]
-    },
-    {
-      "run_index": 2,
+      "run_index": 1,
       "test_id": "enrollment_flow",
-      "user_id": "enrollment_flow-run2-40b53e38",
+      "user_id": "enrollment_flow-run1-bf2e503b",
       "turns": [
         {
           "turn_index": 0,
@@ -880,8 +512,8 @@
           "predicted_intent": "unknown",
           "intent_correct": false,
           "response_pass": false,
-          "latency_ms": 43.248799978755414,
-          "confidence": 0.54,
+          "latency_ms": 9205.830999999307,
+          "confidence": 0.74,
           "intent_match_method": "exact",
           "intent_match_score": 0.0,
           "response_semantic_score": 0.1737353354692459,
@@ -898,8 +530,376 @@
           "predicted_intent": "unknown",
           "intent_correct": false,
           "response_pass": false,
-          "latency_ms": 92.3785999766551,
-          "confidence": 0.53,
+          "latency_ms": 116.02330001187511,
+          "confidence": 0.58,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.02057090774178505,
+          "response_rule_hits": [
+            "kw(register):fail",
+            "kw(application):fail",
+            "kw(process):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        },
+        {
+          "turn_index": 2,
+          "expected_intent": "course_format_question",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 83.84480001404881,
+          "confidence": 0.5,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.057243309915065765,
+          "response_rule_hits": [
+            "kw(online):fail",
+            "kw(remote):fail",
+            "kw(virtual):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        }
+      ]
+    },
+    {
+      "run_index": 0,
+      "test_id": "billing_issue_flow",
+      "user_id": "billing_issue_flow-run0-9dd001e0",
+      "turns": [
+        {
+          "turn_index": 0,
+          "expected_intent": "billing_issue",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 9196.4139000047,
+          "confidence": 0.59,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.03103368729352951,
+          "response_rule_hits": [
+            "kw(invoice):fail",
+            "kw(billing):fail",
+            "kw(charge):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        },
+        {
+          "turn_index": 1,
+          "expected_intent": "double_charge_question",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 140.87370000197552,
+          "confidence": 0.47,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.09577752649784088,
+          "response_rule_hits": [
+            "kw(duplicate):fail",
+            "kw(charged):fail",
+            "kw(billing):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        },
+        {
+          "turn_index": 2,
+          "expected_intent": "refund_request",
+          "predicted_intent": "refund_request",
+          "intent_correct": true,
+          "response_pass": true,
+          "latency_ms": 75.4251999896951,
+          "confidence": 0.89,
+          "intent_match_method": "exact",
+          "intent_match_score": 1.0,
+          "response_semantic_score": 0.6047613620758057,
+          "response_rule_hits": [
+            "kw(refund):pass",
+            "kw(reimburse):fail",
+            "kw(return):fail"
+          ]
+        }
+      ]
+    },
+    {
+      "run_index": 1,
+      "test_id": "billing_issue_flow",
+      "user_id": "billing_issue_flow-run1-53ea95f4",
+      "turns": [
+        {
+          "turn_index": 0,
+          "expected_intent": "billing_issue",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 9217.534499999601,
+          "confidence": 0.55,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.13236211240291595,
+          "response_rule_hits": [
+            "kw(invoice):fail",
+            "kw(billing):fail",
+            "kw(charge):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        },
+        {
+          "turn_index": 1,
+          "expected_intent": "double_charge_question",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 132.0881000137888,
+          "confidence": 0.74,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.09577752649784088,
+          "response_rule_hits": [
+            "kw(duplicate):fail",
+            "kw(charged):fail",
+            "kw(billing):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        },
+        {
+          "turn_index": 2,
+          "expected_intent": "refund_request",
+          "predicted_intent": "refund_request",
+          "intent_correct": true,
+          "response_pass": true,
+          "latency_ms": 136.71759999124333,
+          "confidence": 0.95,
+          "intent_match_method": "exact",
+          "intent_match_score": 1.0,
+          "response_semantic_score": 0.6047613620758057,
+          "response_rule_hits": [
+            "kw(refund):pass",
+            "kw(reimburse):fail",
+            "kw(return):fail"
+          ]
+        }
+      ]
+    },
+    {
+      "run_index": 2,
+      "test_id": "greeting_simple",
+      "user_id": "greeting_simple-run2-7765e8cf",
+      "turns": [
+        {
+          "turn_index": 0,
+          "expected_intent": "greeting",
+          "predicted_intent": "greeting",
+          "intent_correct": true,
+          "response_pass": true,
+          "latency_ms": 141.6218999947887,
+          "confidence": 0.97,
+          "intent_match_method": "exact",
+          "intent_match_score": 1.0,
+          "response_semantic_score": 0.7725078463554382,
+          "response_rule_hits": [
+            "kw(hello):pass",
+            "kw(hi):fail",
+            "kw(welcome):fail"
+          ]
+        },
+        {
+          "turn_index": 1,
+          "expected_intent": "general_help",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 46.39659999520518,
+          "confidence": 0.59,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.13769172132015228,
+          "response_rule_hits": [
+            "kw(help):fail",
+            "kw(assist):fail",
+            "kw(support):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        }
+      ]
+    },
+    {
+      "run_index": 2,
+      "test_id": "technical_support",
+      "user_id": "technical_support-run2-ab2e8ccd",
+      "turns": [
+        {
+          "turn_index": 0,
+          "expected_intent": "technical_issue",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 122.73550001555122,
+          "confidence": 0.58,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.19445781409740448,
+          "response_rule_hits": [
+            "kw(technical):fail",
+            "kw(issue):fail",
+            "kw(problem):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        },
+        {
+          "turn_index": 1,
+          "expected_intent": "server_error",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 69.23860000097193,
+          "confidence": 0.65,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.086635522544384,
+          "response_rule_hits": [
+            "kw(error):fail",
+            "kw(server):fail",
+            "kw(500):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        }
+      ]
+    },
+    {
+      "run_index": 2,
+      "test_id": "ambiguous_question",
+      "user_id": "ambiguous_question-run2-7e05f7a1",
+      "turns": [
+        {
+          "turn_index": 0,
+          "expected_intent": "information_request",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 115.23009999655187,
+          "confidence": 0.47,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.27197957038879395,
+          "response_rule_hits": [
+            "kw(information):fail",
+            "kw(details):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        },
+        {
+          "turn_index": 1,
+          "expected_intent": "program_information",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 70.59650000883266,
+          "confidence": 0.57,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.1810438334941864,
+          "response_rule_hits": [
+            "kw(program):fail",
+            "kw(course):fail",
+            "kw(study):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        }
+      ]
+    },
+    {
+      "run_index": 2,
+      "test_id": "billing_issue_flow",
+      "user_id": "billing_issue_flow-run2-7d6f34ca",
+      "turns": [
+        {
+          "turn_index": 0,
+          "expected_intent": "billing_issue",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 133.16100000520237,
+          "confidence": 0.74,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.13236211240291595,
+          "response_rule_hits": [
+            "kw(invoice):fail",
+            "kw(billing):fail",
+            "kw(charge):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        },
+        {
+          "turn_index": 1,
+          "expected_intent": "double_charge_question",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 45.99089999101125,
+          "confidence": 0.64,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.09577752649784088,
+          "response_rule_hits": [
+            "kw(duplicate):fail",
+            "kw(charged):fail",
+            "kw(billing):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        },
+        {
+          "turn_index": 2,
+          "expected_intent": "refund_request",
+          "predicted_intent": "refund_request",
+          "intent_correct": true,
+          "response_pass": true,
+          "latency_ms": 28.91219998127781,
+          "confidence": 0.9,
+          "intent_match_method": "exact",
+          "intent_match_score": 1.0,
+          "response_semantic_score": 0.6405357122421265,
+          "response_rule_hits": [
+            "kw(refund):pass",
+            "kw(reimburse):fail",
+            "kw(return):fail"
+          ]
+        }
+      ]
+    },
+    {
+      "run_index": 2,
+      "test_id": "enrollment_flow",
+      "user_id": "enrollment_flow-run2-2f7fb2fb",
+      "turns": [
+        {
+          "turn_index": 0,
+          "expected_intent": "course_enrollment",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 138.90920000267215,
+          "confidence": 0.68,
+          "intent_match_method": "exact",
+          "intent_match_score": 0.0,
+          "response_semantic_score": 0.14818766713142395,
+          "response_rule_hits": [
+            "kw(enroll):fail",
+            "kw(course):fail",
+            "kw(program):fail",
+            "semantic_fallback:fail@0.65"
+          ]
+        },
+        {
+          "turn_index": 1,
+          "expected_intent": "registration_process",
+          "predicted_intent": "unknown",
+          "intent_correct": false,
+          "response_pass": false,
+          "latency_ms": 111.67250000289641,
+          "confidence": 0.69,
           "intent_match_method": "exact",
           "intent_match_score": 0.0,
           "response_semantic_score": 0.04029297083616257,
@@ -916,8 +916,8 @@
           "predicted_intent": "unknown",
           "intent_correct": false,
           "response_pass": false,
-          "latency_ms": 132.8196999966167,
-          "confidence": 0.51,
+          "latency_ms": 57.719200005522,
+          "confidence": 0.74,
           "intent_match_method": "exact",
           "intent_match_score": 0.0,
           "response_semantic_score": 0.057243309915065765,
