@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug run_tests.py",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/run_tests.py",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "args": [
+        "--dataset", "test_cases.json",
+        "--base-url", "http://localhost:8080",
+        "--runs", "3",
+        "--output", "report.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "test_id": "greeting_simple",
+    "conversation": [
+      "Hello",
+      "I need help"
+    ],
+    "expected_intents": [
+      "greeting",
+      "general_help"
+    ],
+    "expected_response_keywords": [
+      ["hello", "hi", "welcome"],
+      ["help", "assist", "support"]
+    ]
+  },
+  {
+    "test_id": "enrollment_flow",
+    "conversation": [
+      "I want to enroll in a course",
+      "How do I register?",
+      "Is it online?"
+    ],
+    "expected_intents": [
+      "course_enrollment",
+      "registration_process",
+      "course_format_question"
+    ],
+    "expected_response_keywords": [
+      ["enroll", "course", "program"],
+      ["register", "application", "process"],
+      ["online", "remote", "virtual"]
+    ]
+  },
+  {
+    "test_id": "billing_issue_flow",
+    "conversation": [
+      "My invoice looks incorrect",
+      "Why was I charged twice?",
+      "Can I get a refund?"
+    ],
+    "expected_intents": [
+      "billing_issue",
+      "double_charge_question",
+      "refund_request"
+    ],
+    "expected_response_keywords": [
+      ["invoice", "billing", "charge"],
+      ["duplicate", "charged", "billing"],
+      ["refund", "reimburse", "return"]
+    ]
+  },
+  {
+    "test_id": "technical_support",
+    "conversation": [
+      "The website is not loading",
+      "I get an error 500"
+    ],
+    "expected_intents": [
+      "technical_issue",
+      "server_error"
+    ],
+    "expected_response_keywords": [
+      ["technical", "issue", "problem"],
+      ["error", "server", "500"]
+    ]
+  },
+  {
+    "test_id": "ambiguous_question",
+    "conversation": [
+      "I need information",
+      "About the program"
+    ],
+    "expected_intents": [
+      "information_request",
+      "program_information"
+    ],
+    "expected_response_keywords": [
+      ["information", "details"],
+      ["program", "course", "study"]
+    ]
+  }
+]
