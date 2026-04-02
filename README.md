@@ -3,7 +3,7 @@
 A modular evaluation system designed to test and benchmark conversational chatbot APIs.  
 The tool simulates multi-turn conversations, validates chatbot responses, measures performance, and produces detailed evaluation reports.
 
-This project was built as part of a **Senior Backend Engineer technical challenge** and focuses on designing a **robust, extensible evaluation architecture for LLM-powered systems**.
+
 
 ---
 
